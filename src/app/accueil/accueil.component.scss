@@ -1,0 +1,242 @@
+/* ====== OFFSET POUR HEADER FIXE ====== */
+.section {
+    padding-top: 90px; /* pour que le contenu ne soit pas caché derrière le header */
+    padding-bottom: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    background: linear-gradient(145deg, #f7f7f7, #eaeaea); /* dégradé subtil gris clair */
+  }
+  
+  .section:hover {
+    transform: translateY(-3px);
+  }
+  
+  .section h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 26px;
+  }
+  
+  /* ====== HERO (PRÉSENTATION) ====== */
+  .hero {
+    padding-top: 90px; /* pour que le contenu ne soit pas caché derrière le header */
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .hero .text h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #222;
+  }
+  
+  .hero .text p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .hero .photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #e6e6e6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ====== PROJETS ====== */
+  .projets-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .projet {
+    background: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eaeaea;
+    transition: transform 0.2s ease;
+  }
+  
+  .projet:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* ====== SECTION PARCOURS ====== */
+  #parcours .parcours-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #dcdcdc; /* gris légèrement plus foncé */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  #parcours .details-btn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #3b82f6;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .details-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+  }
+  
+  .parcours-content {
+    flex: 2;
+  }
+  
+  .parcours-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: #333;
+  }
+  
+  .parcours-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .parcours-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .parcours-image img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero .photo img {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .projets-container {
+      grid-template-columns: 1fr;
+    }
+  
+    #parcours .parcours-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .parcours-image {
+      justify-content: center;
+      margin-top: 15px;
+    }
+  
+    .parcours-image img {
+      width: 150px;
+    }
+  }
+
+  
+
+
+  /* --- EXPERIENCES --- */
+#experiences {
+    .experience-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: #e0e0e0; // gris un peu plus foncé
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+  
+    .experience-content {
+      flex: 2;
+    }
+  
+    .experience-content h3 {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+      color: #333;
+    }
+  
+    .experience-content p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.5;
+    }
+  
+    .experience-image {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .experience-image img {
+      width: 110px;
+      height: auto;
+      object-fit: contain;
+    }
+  
+    .details-btn {
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #3b82f6;
+      border: none;
+      color: white;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+  
+    .details-btn:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+  }
+  
+  /* --- Responsive Experiences --- */
+  @media (max-width: 768px) {
+    #experiences .experience-card {
+      flex-direction: column;
+      text-align: left;
+    }
+  
+    #experiences .experience-image {
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    #experiences .experience-image img {
+      width: 140px;
+    }
+  }
+  
+  
