@@ -1,43 +1,60 @@
-<div class="header"> 
-    <app-header></app-header>
-</div>
+
+
+<app-header></app-header>
 
 <div style="height: 80px;"></div> <!-- espace pour le header -->
-
 
 <!-- PRESENTATION -->
 <section id="presentation" class="section hero fade-section">
     <div class="text">
       <h1>Jordan TCHUEM SIAKA</h1>
-      <p>Ingénieur spécialisé dans le développement des systèmes d'information</p>
-    </div>
+      <p>
+        Software Engineering graduate from ECE Paris (Class of 2025), specialized in information systems and full-stack development. Currently seeking a full-time position (CDI) to contribute to impactful software projects while continuing to grow as an engineer in a dynamic and collaborative environment.
+      </p></div>
   
     <div class="photo">
       <img src="/assets/images/photo_cv.jpg" alt="Ma photo">
     </div>
   </section>
   
-<!-- PARCOURS -->
-<section id="parcours" class="section fade-section">
-    <h2>Mon parcours</h2>
-  
-    <div class="parcours-card">
-      <div class="parcours-content">
-        <h3>ECE Paris (Cycle Ingénieur, BAC +5)</h3>
-        <p>
-          J’ai suivi un cursus complet en ingénierie informatique, 
-          avec des projets en développement web et systèmes d’information.
-        </p>
-        <button class="details-btn" routerLink="/parcours-details">
-            View Details
-        </button>
-      </div>
-      <div class="parcours-image">
-        <img src="/assets/images/ECE_LOGO.png" alt="ECE Paris">
+<!-- EDUCATION -->
+<section id="education" class="section fade-section">
+  <h2>Education</h2>
 
-      </div>
+  <!-- ECE Paris -->
+  <div class="parcours-card">
+    <div class="parcours-content">
+      <h3>ECE Paris – Engineering Degree (Master’s level, Bac +5)</h3>
+      <p>
+        I completed an <strong>Engineering Degree in Software Engineering</strong> at ECE Paris,
+        where I built strong expertise in web development, software architecture,
+        and information systems through academic projects and hands-on technical work.
+      </p>
     </div>
-  </section>
+
+    <div class="parcours-image">
+      <img src="/assets/images/ECE_LOGO.png" alt="ECE Paris">
+    </div>
+  </div>
+
+  <!-- Lycée Langevin-Wallon -->
+  <div class="parcours-card">
+    <div class="parcours-content">
+      <h3>Lycée Langevin-Wallon – Scientific Preparatory Classes</h3>
+      <p>
+        I completed <strong>scientific preparatory classes</strong> with a strong focus on
+        mathematics, physics, and problem-solving, which helped me develop rigor,
+        analytical thinking, and a solid scientific foundation.
+      </p>
+    </div>
+
+    <div class="parcours-image">
+      <img src="/assets/images/langevin.png" alt="Langevin-Wallon">
+    </div>
+  </div>
+
+</section>
+
   
   
   <!-- EXPERIENCES -->
@@ -46,18 +63,15 @@
   
     <div class="experience-card">
       <div class="experience-content">
-        <h3>Enedis – IT & Systems Engineering</h3>
+        <h3>Enedis – Software engeneer</h3>
         <p>
-          As part of the IT engineering division, I contributed to the development,
-          maintenance, and optimization of information systems supporting national-scale
-          energy distribution operations. My role included full-stack development,
-          data flows management, workflow automation, and collaboration within
-          agile teams.
+          During my 6-month internship at Enedis, I worked as a software developer within an agile environment, contributing to the development and maintenance of information systems using Java Spring Boot, Angular, and modern DevOps practices on large-scale, production-level applications.
         </p>
   
-        <button class="details-btn" routerLink="/enedis-details">
+        <button class="details-btn" [routerLink]="['/enedis']">
           View Details
         </button>
+        
       </div>
   
       <div class="experience-image">
@@ -67,20 +81,81 @@
   </section>
   
   
-  <!-- PROJETS -->
-  <section id="projets" class="section fade-section">
-    <h2>Mes projets</h2>
+  <!-- softskills -->
+  <section id="softskills" class="section fade-section">
+    <h2>areas of interest</h2>
     <div class="projets-container">
-      <div class="projet">Projet 1</div>
-      <div class="projet">Projet 2</div>
-      <div class="projet">Projet 3</div>
+      <div class="projet">Anglais</div>
+      <div class="projet">AI</div>
+      <div class="projet">Sports</div>
     </div>
   </section>
   
   <!-- CONTACT -->
-  <section id="contact" class="section fade-section">
-    <h2>Contact</h2>
-    <p>Email : tonemailgmail.com</p>
-    <p>LinkedIn : ton-lien</p>
-  </section>
+<section id="contact" class="section fade-section">
+  <h2>Contact</h2>
+
+  <!-- YOU -->
+  <div class="contact-group">
+    <h3>Get in touch with me</h3>
+
+    <div class="contact-pills">
+      <a
+        class="contact-pill"
+        href="https://www.linkedin.com/in/jordan-tchuem-siaka-8a85031b3/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="/assets/images/linkedin.png" alt="LinkedIn" />
+        LinkedIn
+      </a>
+
+      <a
+        class="contact-pill"
+        href="https://github.com/Jojo94UTD"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="/assets/images/github.png" alt="GitHub" />
+        GitHub
+      </a>
+
+      <a
+        class="contact-pill"
+        href="jordan_tchuem@yahoo.fr"
+      >
+        <img src="/assets/images/email.jpg" alt="Email" />
+        Email
+      </a>
+    </div>
+  </div>
+
+  <!-- REFEREE -->
+  <div class="contact-group">
+    <h3>Professional Referee - Abdel Samad CHITOU</h3>
+
+    <div class="contact-pills">
+      <a
+        class="contact-pill"
+        href="https://www.linkedin.com/in/REF-LINKEDIN"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="/assets/images/linkedin.png" alt="LinkedIn" />
+        LinkedIn
+      </a>
+
+      <a
+        class="contact-pill"
+        href="abdel-samad-externe.chitou@enedis.fr"
+      >
+        <img src="/assets/images/email.jpg" alt="Email" />
+        Email
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
   

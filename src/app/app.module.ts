@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { HeaderComponent } from './header/header.component';
 import { EducationComponent } from './education/education.component';
+import { EnedisComponent } from './enedis/enedis.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
     HeaderComponent,
-    EducationComponent
+    EducationComponent,
+    EnedisComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    RouterModule
   ],
   providers: [
     provideClientHydration(withEventReplay())

@@ -1,242 +1,301 @@
-/* ====== OFFSET POUR HEADER FIXE ====== */
+/* =====================================================
+   GLOBAL
+===================================================== */
+
 .section {
-    padding-top: 90px; /* pour que le contenu ne soit pas caché derrière le header */
-    padding-bottom: 30px;
-    max-width: 1200px;
-    margin: 40px auto;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease;
-    background: linear-gradient(145deg, #f7f7f7, #eaeaea); /* dégradé subtil gris clair */
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 56px;
+  border-radius: 28px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(245, 247, 250, 0.96)
+  );
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.12);
+}
+
+.section h2 {
+  margin-bottom: 32px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+.section p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* =====================================================
+   FADE-IN SCROLL EFFECT
+===================================================== */
+
+.fade-section {
+  opacity: 1;
+  transform: none;
+}
+
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================================================
+   HERO / PRESENTATION
+===================================================== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero .text h1 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.hero .text p {
+  font-size: 20px;
+  max-width: 520px;
+  color: #475569;
+}
+
+/* ===== Photo CV (CERCLE) ===== */
+
+.hero .photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* =====================================================
+   PARCOURS
+===================================================== */
+
+.parcours-card {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 40px;
+  border-radius: 24px;
+  background: linear-gradient(
+    145deg,
+    #f8fafc,
+    #eef2f7
+  );
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+}
+
+.parcours-content {
+  flex: 2;
+}
+
+.parcours-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+/* ===== Image RECTANGULAIRE ===== */
+
+.parcours-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.parcours-image img {
+  max-width: 160px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+}
+
+/* =====================================================
+   EXPERIENCES
+===================================================== */
+
+.experience-card {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 40px;
+  border-radius: 24px;
+  background: linear-gradient(
+    145deg,
+    #f8fafc,
+    #eef2f7
+  );
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+}
+
+.experience-content {
+  flex: 2;
+}
+
+.experience-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+/* ===== Image RECTANGULAIRE ===== */
+
+.experience-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.experience-image img {
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.18));
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.details-btn {
+  margin-top: 20px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+  background: #111827;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.details-btn:hover {
+  background: #1f2937;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projets-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.projet {
+  padding: 36px;
+  text-align: center;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.projet:hover {
+  transform: translateY(-6px);
+}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+#contact p {
+  font-size: 18px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 36px;
+    margin: 80px 16px;
   }
-  
-  .section:hover {
-    transform: translateY(-3px);
-  }
-  
-  .section h2 {
-    margin-top: 0;
-    color: #333;
-    font-size: 26px;
-  }
-  
-  /* ====== HERO (PRÉSENTATION) ====== */
-  .hero {
-    padding-top: 90px; /* pour que le contenu ne soit pas caché derrière le header */
-    padding-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-  }
-  
-  .hero .text h1 {
-    margin: 0;
-    font-size: 32px;
-    color: #222;
-  }
-  
-  .hero .text p {
-    font-size: 18px;
-    color: #555;
-  }
-  
-  .hero .photo img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #e6e6e6;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* ====== PROJETS ====== */
-  .projets-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-  }
-  
-  .projet {
-    background: #ffffff;
-    padding: 20px;
+
+  .hero,
+  .parcours-card,
+  .experience-card {
+    flex-direction: column;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-    border: 1px solid #eaeaea;
-    transition: transform 0.2s ease;
-  }
-  
-  .projet:hover {
-    transform: translateY(-4px);
-  }
-  
-  /* ====== SECTION PARCOURS ====== */
-  #parcours .parcours-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    background: #dcdcdc; /* gris légèrement plus foncé */
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
   }
 
-  #parcours .details-btn {
-    margin-top: 15px;
-    padding: 10px 18px;
-    background: #3b82f6;
-    border: none;
-    color: white;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+  .parcours-image,
+  .experience-image {
+    justify-content: center;
+    margin-top: 24px;
   }
 
-  .details-btn:hover {
-    opacity: 0.85;
+  .projets-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero .photo img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+// contact
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; // un peu moins d'espace entre icône et texte
+
+  padding: 8px 14px; // un peu plus compact
+  border-radius: 999px;
+
+  background: linear-gradient(145deg, #f5f5f5, #ffffff);
+  border: 1px solid #e1e1e1;
+
+  color: #333;
+  font-size: 13px; // légèrement plus petit
+  font-weight: 500;
+  text-decoration: none;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+
+  img {
+    width: 14px;   // taille réduite
+    height: 14px;  // taille réduite
+    object-fit: contain;
+  }
+
+  &:hover {
     transform: translateY(-2px);
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   }
-  
-  .parcours-content {
-    flex: 2;
-  }
-  
-  .parcours-content h3 {
-    margin: 0 0 10px 0;
-    font-size: 22px;
-    color: #333;
-  }
-  
-  .parcours-content p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-  }
-  
-  .parcours-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .parcours-image img {
-    width: 120px;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-  
-  /* ====== RESPONSIVE ====== */
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .hero .photo img {
-      width: 180px;
-      height: 180px;
-    }
-  
-    .projets-container {
-      grid-template-columns: 1fr;
-    }
-  
-    #parcours .parcours-card {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .parcours-image {
-      justify-content: center;
-      margin-top: 15px;
-    }
-  
-    .parcours-image img {
-      width: 150px;
-    }
-  }
+}
 
-  
-
-
-  /* --- EXPERIENCES --- */
-#experiences {
-    .experience-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      background: #e0e0e0; // gris un peu plus foncé
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    }
-  
-    .experience-content {
-      flex: 2;
-    }
-  
-    .experience-content h3 {
-      margin: 0 0 10px 0;
-      font-size: 22px;
-      color: #333;
-    }
-  
-    .experience-content p {
-      font-size: 16px;
-      color: #555;
-      line-height: 1.5;
-    }
-  
-    .experience-image {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-    }
-  
-    .experience-image img {
-      width: 110px;
-      height: auto;
-      object-fit: contain;
-    }
-  
-    .details-btn {
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #3b82f6;
-      border: none;
-      color: white;
-      font-weight: 600;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-  
-    .details-btn:hover {
-      opacity: 0.85;
-      transform: translateY(-2px);
-    }
-  }
-  
-  /* --- Responsive Experiences --- */
-  @media (max-width: 768px) {
-    #experiences .experience-card {
-      flex-direction: column;
-      text-align: left;
-    }
-  
-    #experiences .experience-image {
-      justify-content: center;
-      margin-top: 10px;
-    }
-  
-    #experiences .experience-image img {
-      width: 140px;
-    }
-  }
-  
-  
