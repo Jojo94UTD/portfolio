@@ -5,10 +5,10 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { EnedisComponent } from './enedis/enedis.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'accueil', pathMatch: 'full' },
+  { path: '', component: AccueilComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'enedis', component: EnedisComponent },
-  { path: '**', redirectTo: 'accueil' }
+  { path: '**', redirectTo: '' } // fallback
 ];
 
 

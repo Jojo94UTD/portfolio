@@ -1,6 +1,5 @@
 {
     "root": "dist/portfolio",
-    "clean_urls": true,
     "routes": {
       "/": "index.html",
       "/**": "index.html"
